@@ -5,12 +5,12 @@ const navbarLinks = [
     { 
         id: 1,
         title:"Inicio",
-        href:"#"
+        href:"/"
     },
     { 
         id: 2,
         title:"Nuestra Historia",
-        href:"#"
+        href:"#historia"
     },
     { 
         id: 3,
@@ -20,7 +20,7 @@ const navbarLinks = [
     { 
         id: 4,
         title:"Reseñas",
-        href:"#"
+        href:"#resenias"
     },
     { 
         id: 5,
@@ -52,7 +52,7 @@ const Navbar = () => {
     <nav className='fixed top-0 left-0 w-full bg-white z-50 shadow-md'>
         <div className='flex justify-between items-center px-4 py-2'>
             <div>
-                <img src={logo} alt="Aranco" className='w-[30px]'/>
+                <img src={logo} alt="Aranco" className='w-7.5'/>
             </div>   
 
             {/* El map recorre el array de los links, para que el código sea más
@@ -76,7 +76,7 @@ const Navbar = () => {
                     {navbarIcons.map((icon)=> (
                         <li key={icon.id}>
                             <a href={icon.href}>
-                                <i className={`${icon.icon} text-lg transition-transform hover:scale-120 transform inline-block duration-300 hover:text-gray-600`} >
+                                <i className={`${icon.icon} text-xl transition-transform hover:scale-120 transform inline-block duration-300 hover:text-gray-600`} >
 
                                 </i>
                             </a>
