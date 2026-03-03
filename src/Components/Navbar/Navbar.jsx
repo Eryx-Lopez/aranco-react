@@ -52,7 +52,7 @@ const Navbar = () => {
     <nav className='fixed top-0 left-0 w-full bg-white z-50 shadow-md'>
         <div className='flex justify-between items-center px-4 py-2'>
             <div>
-                <img src={logo} alt="Aranco" className='w-75'/>
+                <img src={logo} alt="Aranco" className='w-[30px]'/>
             </div>   
 
             {/* El map recorre el array de los links, para que el código sea más
