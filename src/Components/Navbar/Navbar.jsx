@@ -49,7 +49,7 @@ const navbarIcons = [
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='fixed top-0 left-0 w-full bg-white z-50 shadow-md'>
         <div className='flex justify-between items-center px-4 py-2'>
             <div>
                 <img src={logo} alt="Aranco" className='w-[30px]'/>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <ul className='flex space-x-8'>
                     {navbarLinks.map((link)=>(
                         <li key={link.id}>
-                            <a className='text-lg border-b-2 border-transparent hover:border-black py-1 transition-transform hover:scale-102
+                            <a className='text-lg border-b-2 border-transparent hover:border-black py-1 transition-transform hover:scale-105
                             transform inline-block duration-300'
                                 href={link.href}>
                                 {link.title}
@@ -76,7 +76,7 @@ const Navbar = () => {
                     {navbarIcons.map((icon)=> (
                         <li key={icon.id}>
                             <a href={icon.href}>
-                                <i className={`${icon.icon} text-lg transition-transform hover:scale-102 transform inline-block duration-300 hover:text-gray-600`} >
+                                <i className={`${icon.icon} text-lg transition-transform hover:scale-120 transform inline-block duration-300 hover:text-gray-600`} >
 
                                 </i>
                             </a>
