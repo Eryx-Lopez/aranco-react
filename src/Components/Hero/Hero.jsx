@@ -32,7 +32,7 @@ const Hero = () => {
       <section>
         <img src={bannerInicio} alt='BannerInicio' className='max-w-full'/>
       </section>
-      <section className='flex justify-between space-x-20 items-center mx-60 my-10'> 
+      <section className='flex justify-between space-x-20 items-center mx-60 my-10 scroll-mt-22' id='historia'> 
         <div className='text-center'>
           <h2 className='text-3xl font-black mb-4'>Nuestra Historia</h2>
           <p className='text-lg'>Lorem ipsum dolor sit amet consectetur adipiscing elit proin, cubilia vel sociis 
@@ -48,7 +48,7 @@ const Hero = () => {
         
       </section>
 
-      <section className='mx-60 my-4'>
+      <section className='mx-60 my-4 scroll-mt-22' id='resenias'>
         <h2 className='text-3xl font-black mb-4'>Reseñas</h2>
         <div className='flex gap-16 justify-center'> 
           {resenias.map((resenia)=>(
