@@ -1,50 +1,19 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../Assets/aranco-logo.png'
+import { HashLink } from 'react-router-hash-link'
 
 const navbarLinks = [
-    { 
-        id: 1,
-        title:"Inicio",
-        href:"/"
-    },
-    { 
-        id: 2,
-        title:"Nuestra Historia",
-        href:"#historia"
-    },
-    { 
-        id: 3,
-        title:"Catálogo",
-        href:"#"
-    },
-    { 
-        id: 4,
-        title:"Reseñas",
-        href:"#resenias"
-    },
-    { 
-        id: 5,
-        title:"Preguntas frecuentes",
-        href:"#"
-    }
+    { id: 1, title:"Inicio", href:"/#inicio" },
+    { id: 2, title:"Nuestra Historia", href:"/#historia" },
+    { id: 3, title:"Catálogo", href:"/catalogo/#catalogo" },
+    { id: 4, title:"Reseñas", href:"/#resenias" },
+    { id: 5, title:"Preguntas frecuentes", href:"/preguntas-frecuentes/#faqs" }
 ]
 
 const navbarIcons = [
-    {
-        id: 1,
-        icon: 'bi bi-search',
-        href: "#"
-    },
-    {
-        id: 2,
-        icon: 'bi bi-person-circle',
-        href: "#"
-    },
-    {
-        id: 3,
-        icon: 'bi bi-cart',
-        href: "#"
-    },
+    { id: 1, icon: 'bi bi-search', href: "#" },
+    { id: 2, icon: 'bi bi-person-circle', href: "#" },
+    { id: 3, icon: 'bi bi-cart', href: "#" },
 ]
 
 const Navbar = () => {
@@ -61,11 +30,18 @@ const Navbar = () => {
                 <ul className='flex space-x-8'>
                     {navbarLinks.map((link)=>(
                         <li key={link.id}>
-                            <a className='text-lg border-b-2 border-transparent hover:border-black py-1 transition-transform hover:scale-105
-                            transform inline-block duration-300'
-                                href={link.href}>
-                                {link.title}
-                            </a>
+                            {link.href.includes("#") ? (
+                                <HashLink className='text-lg border-b-2 border-transparent hover:border-black py-1 transition-transform hover:scale-105 transform inline-block duration-300'
+                                smooth to={link.href}>
+                                    {link.title}
+                                </HashLink>
+                            ) : (
+                                <Link className='text-lg border-b-2 border-transparent hover:border-black py-1 transition-transform hover:scale-105 transform inline-block duration-300'
+                                to={link.href}
+                                >
+                                    {link.title}
+                                </Link>                        
+                            )}
                         </li>
                     ))}    
                 </ul>

@@ -1,92 +1,34 @@
 import React from 'react'
 const footerIcons = [
-    {
-        id: 1,
-        icon: 'bi bi-instagram',
-        href: "#"
-    },
-    {
-        id: 2,
-        icon: 'bi bi-facebook',
-        href: "#"
-    },
-    {
-        id: 3,
-        icon: 'bi bi-whatsapp',
-        href: "#"
-    },
+    { id: 1, icon: 'bi bi-instagram', href: "#" },
+    { id: 2, icon: 'bi bi-facebook', href: "#" },
+    { id: 3, icon: 'bi bi-whatsapp', href: "#" },
 ]
 
 const categoriasList = [
-    {
-        id: 1,
-        text: 'Música' ,
-        href: ''
-    },
-        {
-        id: 2,
-        text: 'Anime' ,
-        href: ''
-    },
-        {
-        id: 3,
-        text: 'Series y películas' ,
-        href: ''
-    },
+    { id: 1, text: 'Música', href: '' },
+    { id: 2, text: 'Anime', href: '' },
+    { id: 3, text: 'Series y películas', href: '' },
 ]
 
 const acercaList = [
-    {
-        id: 1,
-        text: 'Nosotros' ,
-        href: ''
-    },
-        {
-        id: 2,
-        text: 'Contacto' ,
-        href: ''
-    },
-    {
-        id: 3,
-        text: 'Solicitar factura' ,
-        href: ''
-    },
-        {
-        id: 4,
-        text: 'Preguntas frecuentes' ,
-        href: ''
-    },
-    
+    { id: 1, text: 'Nosotros', href: '' },
+    { id: 2, text: 'Contacto', href: '' },
+    { id: 3, text: 'Solicitar factura', href: '' },
+    { id: 4, text: 'Preguntas frecuentes', href: '' },
 ]
 
 const legalList = [
-    {
-        id: 1,
-        text: 'Términos y condiciones de promociones vigentes' ,
-        href: ''
-    },
-        {
-        id: 2,
-        text: 'Políticas de envío' ,
-        href: ''
-    },
-    {
-        id: 3,
-        text: 'Políticas de privacidad' ,
-        href: ''
-    },
-        {
-        id: 4,
-        text: 'Políticas de devolución' ,
-        href: ''
-    },
-    
+    { id: 1, text: 'Términos y condiciones de promociones vigentes' , href: '' },
+    { id: 2, text: 'Políticas de envío', href: '' },
+    { id: 3, text: 'Políticas de privacidad', href: ''},
+    { id: 4, text: 'Políticas de devolución', href: '' },   
 ]
 
 const Footer = () => {
   return (
-    <div className='bg-black text-white py-15 '>
-        <div className=' w-full flex gap-20 border-y border-neutral-700 py-4'>
+    <div className='bg-black text-white pt-15 '>
+        <div className=' w-full flex gap-20 2xl:gap-40 border-y border-neutral-700 py-4 '>
             <div className='px-20'>
                 <h3>CATEGORIAS</h3>
                 {categoriasList.map((categoria)=> (
@@ -120,7 +62,7 @@ const Footer = () => {
                 ))}
             </div>
 
-            <div className='ml-15 border-l border-neutral-700 pl-15'>
+            <div className='ml-15 border-l border-neutral-700 pl-15 '>
                 <h3>SÍGUENOS</h3>
                 <div className='flex gap-6'>
                     {footerIcons.map((icon)=> (
@@ -131,9 +73,12 @@ const Footer = () => {
                         </li>
                     ))}
                 </div>
+            </div>
         </div>
+        <div className=' text-lg px-8 py-4 w-full text-center flex justify-between'>
+            <p>Aranco</p>
+            <p>Copyright © 2026 Aranco. Todos los derechos reservados.</p>
         </div>
-        
     </div>
   )
 }
