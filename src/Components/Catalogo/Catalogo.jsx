@@ -11,6 +11,7 @@ const categoriasList = [
     { id: 1, text: 'K-pop', key: 'kpop' },
     { id: 2, text: 'Anime', key:'anime' },
     { id: 3, text: 'Música', key: 'musica' },
+    { id: 4, text: 'Personalizadas', key: 'personalizadas' },
 ]
 
 const productos ={
@@ -29,6 +30,12 @@ const productos ={
       { id: 2, nombre: 'Mon Laferte', precio: '$300', img: monlaferte1 },
       { id: 3, nombre: 'Bad Bunny', precio: '$300', img: humbe1 },
     ],
+    personalizadas: [
+      { id: 1, nombre: 'Humbe', precio: '$300', img: humbe1 },
+      { id: 2, nombre: 'Mon Laferte', precio: '$300', img: monlaferte1 },
+      { id: 3, nombre: 'Bad Bunny', precio: '$300', img: karma_felix1 },
+    ],
+    
 }
 
 const Catalogo = () => {
@@ -52,9 +59,9 @@ const Catalogo = () => {
         ))}
       </div>
 
-        {/* Renderizado de los productos 
+        {/* Renderizado de los productos */}
       {categoriaSeleccionada && (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8' style='background-image: '>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8'>
           {productos[categoriaSeleccionada].map((producto) =>
             <div 
               key={producto.id} 
@@ -66,7 +73,7 @@ const Catalogo = () => {
                 height: '400px'
               }}
             >
-              <div className='absolute bottom-0 w-full bg-black bg-opacity-60 text-white p-4'>
+              <div className='absolute bottom-0 w-full bg-black text-white p-4 bg-opacity-'>
                 <h3 className='text-lg font-bold'>{producto.nombre}</h3>
                 <p>{producto.precio}</p>
               </div>
@@ -74,7 +81,7 @@ const Catalogo = () => {
           )}
         </div>
       )}
-      */}
+      
     </div>
   );
 };
