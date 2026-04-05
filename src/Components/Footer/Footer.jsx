@@ -27,9 +27,9 @@ const legalList = [
 
 const Footer = () => {
   return (
-    <div className='bg-black text-white pt-15 '>
-        <div className=' w-full flex gap-20 2xl:gap-40 border-y border-neutral-700 py-4 '>
-            <div className='px-20'>
+    <div className='bg-black text-white pt-15 content mx-auto'>
+        <div className=' w-full flex flex-col md:gap-20 md:flex-row gap-10 2xl:gap-40 border-y border-neutral-700 py-4 justify-center '>
+            <div className='px-20 md:px-0'>
                 <h3>CATEGORIAS</h3>
                 {categoriasList.map((categoria)=> (
                     <li key={categoria.id} className='max-w-37.5 wrap-break-word list-none mb-3'>
@@ -40,7 +40,7 @@ const Footer = () => {
                 ))}
             </div>
             
-            <div>
+            <div className='px-20 md:px-0'>
                 <h3>ACERCA DE</h3>
                 {acercaList.map((acerca)=> (
                     <li key={acerca.id} className='max-w-37.5 wrap-break-word list-none mb-3'>
@@ -51,7 +51,7 @@ const Footer = () => {
                 ))}
             </div>
 
-            <div>
+            <div className='px-20 md:px-0'>
                 <h3>LEGAL</h3>
                 {legalList.map((legal)=> (
                     <li key={legal.id} className='max-w-37.5 wrap-break-word list-none mb-3'>
@@ -62,22 +62,22 @@ const Footer = () => {
                 ))}
             </div>
 
-            <div className='ml-15 border-l border-neutral-700 pl-15 '>
-                <h3>SÍGUENOS</h3>
-                <div className='flex gap-6'>
-                    {footerIcons.map((icon)=> (
-                        <li key={icon.id} className='list-none'>
-                            <a href={icon.href}>
-                                <i className={`${icon.icon} text-lg transition-transform hover:scale-120 transform inline-block duration-300 hover:text-gray-600`}></i>
-                            </a>
-                        </li>
+            <div className="px-20 md:px-0 md:flex-start">
+                <h3 className="font-semibold mb-4">SÍGUENOS</h3>
+                <div className="flex gap-6">
+                    {footerIcons.map((icon) => (
+                    <li key={icon.id} className="list-none">
+                        <a href={icon.href}>
+                        <i className={`${icon.icon} text-lg transition-transform hover:scale-110 transform inline-block duration-300 hover:text-gray-600`}></i>
+                        </a>
+                    </li>
                     ))}
                 </div>
             </div>
         </div>
         <div className=' text-lg px-8 py-4 w-full text-center flex justify-between'>
             <p>Aranco</p>
-            <p>Copyright © 2026 Aranco. Todos los derechos reservados.</p>
+            <p className='md:flex-wrap'>Copyright © 2026 Aranco. Todos los derechos reservados.</p>
         </div>
     </div>
   )

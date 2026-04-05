@@ -45,7 +45,7 @@ const Catalogo = () => {
     <div className='max-w-2xl md:max-w-3xl mx-auto m-26 mb-20 flex flex-col gap-4 scroll-mt-22' id='catalogo'>
       <h2 className='text-4xl font-bold mb-6 text-center'>Catálogo</h2>
       {/* Categorias */}
-      <div className='flex justify-center gap-8'>
+      <div className='grid justify-center gap-8 lg:grid-cols-4 md:grid-cols-2 mt-8 sm:grid-cols-1'>
         {categoriasList.map((categoria)=> (
           <div 
           key={categoria.id} 
@@ -61,7 +61,7 @@ const Catalogo = () => {
 
         {/* Renderizado de los productos */}
       {categoriaSeleccionada && (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 sm:grid-cols-1' >
           {productos[categoriaSeleccionada].map((producto) =>
             <div 
               key={producto.id} 
