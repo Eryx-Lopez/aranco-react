@@ -42,9 +42,9 @@ const Catalogo = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('kpop');
 
   return (
+    /* Lista de Categorias */
     <div className='max-w-2xl md:max-w-3xl mx-auto m-26 mb-20 flex flex-col gap-4 scroll-mt-22' id='catalogo'>
       <h2 className='text-4xl font-bold mb-6 text-center'>Catálogo</h2>
-      {/* Categorias */}
       <div className='grid justify-center gap-8 lg:grid-cols-4 md:grid-cols-2 mt-8 sm:grid-cols-1'>
         {categoriasList.map((categoria)=> (
           <div 
@@ -61,16 +61,16 @@ const Catalogo = () => {
 
         {/* Renderizado de los productos */}
       {categoriaSeleccionada && (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 sm:grid-cols-1' >
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-10 med:gap-6 mt-8 mx-15 sm:mx-6 md:mx-4' >
           {productos[categoriaSeleccionada].map((producto) =>
             <div 
               key={producto.id} 
-              className='relative bg-gray-200 rounded-lg overflow-hidden shadow-lg'
+              className='relative bg-gray-200 rounded-lg overflow-hidden shadow-lg aspect-3/4 cursor-pointer transform transition-transform duration-300 hover:scale-105 '
               style={{
                 backgroundImage: `url(${producto.img})`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: '400px'
+                backgroundPosition: 'center'
+
               }}
             >
               <div className='absolute bottom-0 w-full bg-black text-white p-4 bg-opacity-'>

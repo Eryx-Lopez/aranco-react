@@ -76,7 +76,7 @@ const Footer = () => {
             </div>
         </div>
         <div className=' text-lg px-8 py-4 w-full text-center flex justify-between'>
-            <p>Aranco</p>
+            <p >Aranco</p>
             <p className='md:flex-wrap'>Copyright © 2026 Aranco. Todos los derechos reservados.</p>
         </div>
     </div>
