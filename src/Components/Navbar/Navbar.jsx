@@ -7,8 +7,8 @@ import { HashLink } from 'react-router-hash-link'
 const navbarLinks = [
     { id: 1, title:"Inicio", href:"/#inicio" },
     { id: 2, title:"Nuestra Historia", href:"/#historia" },
-    { id: 3, title:"Catálogo", href:"/catalogo/#catalogo" },
-    { id: 4, title:"Reseñas", href:"/#resenias" },
+    { id: 3, title:"Reseñas", href:"/#resenias" },
+    { id: 4, title:"Referencias", href:"/referencias/#referencias" },
     { id: 5, title:"Preguntas frecuentes", href:"/preguntas-frecuentes/#faqs" }
 ]
 
@@ -27,7 +27,7 @@ const Navbar = () => {
     }
 
   return (
-    <nav className='fixed top-0 left-0 w-full bg-white z-50 shadow-md'>
+    <nav className='fixed top-0 left-0 w-full bg-black z-50 shadow-md'>
         {/* Navbar en escritorio */}
         <div className='flex justify-between items-center px-4 py-2 container mx-auto'>
             <div>
@@ -46,6 +46,7 @@ const Navbar = () => {
                         <path 
                         strokeLinecap="round"
                         strokeLinejoin="round"
+                        color='white'
                         strokeWidth={2}
                         d="M6 18L18 6M6 6l12 12"
                         /> 
@@ -56,6 +57,7 @@ const Navbar = () => {
                             strokeLinejoin="round"
                             strokeWidth={2}
                             d="M4 6h16M4 12h16M4 18h16"
+                            color='white'
                         />
                     )}
                     
@@ -67,7 +69,7 @@ const Navbar = () => {
             <div className='hidden md:block'>
                 <ul className='flex space-x-8'>
                     {navbarLinks.map((link)=>(
-                        <li key={link.id} className='text-lg border-b-2 border-transparent hover:border-black py-1 transition-transform hover:scale-105 transform inline-block duration-300'>
+                        <li key={link.id} className='text-lg border-b-2 border-transparent hover:border-white text-white py-1 transition-transform hover:scale-105 transform inline-block duration-300'>
                             {link.href.includes("#") ? (
                                 //El HashLink es para hacer scroll suave a secciones dentro de la misma página, el Link es para navegar a otras páginas
                                 <HashLink 
@@ -92,7 +94,7 @@ const Navbar = () => {
                     {navbarIcons.map((icon)=> (
                         <li key={icon.id}>
                             <a href={icon.href}>
-                                <i className={`${icon.icon} text-xl transition-transform hover:scale-120 transform inline-block duration-300 hover:text-gray-600`} >
+                                <i className={`${icon.icon} text-xl transition-transform hover:scale-120 transform inline-block duration-300 text-white`} >
 
                                 </i>
                             </a>

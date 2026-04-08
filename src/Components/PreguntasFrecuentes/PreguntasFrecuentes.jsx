@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import MapaTienda from '../MapaGoogle/MapaTienda';
 
 const faqs = [
   { id: 1, 
-    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
-    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    pregunta: "¿Tienen tienda física?",
+    respuesta: <MapaTienda />
   },
   { id: 2, 
     pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
@@ -47,7 +48,8 @@ const PreguntasFrecuentes = () => {
         </div>
       ))}
       
-      <p className='text-center mt-8 text-lg'>¿No encontraste lo que buscabas? <a href="https://wa.me/5213318454168?text=Me%20gustaría%20saber%20más%20sobre%20las%20frazadas" className='text-red-900 hover:text-black underline underline-offset-4'>Contáctanos</a></p>
+      <p className='text-center mt-8 text-lg'>¿No encontraste lo que buscabas? <a href="/contacto" className='text-red-900 hover:text-black
+       underline underline-offset-4'>Contáctanos</a></p>
       
     </div>
   );

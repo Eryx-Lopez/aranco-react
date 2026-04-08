@@ -4,7 +4,9 @@ import resenia1 from '../../Assets/mockup1.png'
 import resenia2 from '../../Assets/mockup2.png'
 import resenia3 from '../../Assets/mockup3.png'
 
+import videoHiatus from '../../Assets/videohiatus.mp4'
 import bannerInicio from '../../Assets/BannerInicio.png'
+import bannerInicioMovil from '../../Assets/bannerInicioMovil.png'
 
 const resenias = [
   { id: 1, nombre:"Cliente 1", img: resenia1, resenia: "Lorem ipsum dolor sit amet consectetur" },
@@ -14,18 +16,21 @@ const resenias = [
 ]
 
 const Hero = () => {
+    {/* Función para cambiar el banner según tamaño en pantalla */}
+
 
   return (
     <div className='mt-13.5'>
         {/* Sección banner promocional */}
       <section>
-        <img src={bannerInicio} alt='BannerInicio' className='max-w-full scroll-mt-22' id='inicio'/>
+        <img src={bannerInicio} alt='BannerInicio' className='max-w-full scroll-mt-22 hidden md:block' id='inicio'/>
+        <img src={bannerInicioMovil} alt='BannerInicio' className='max-w-full scroll-mt-22 block md:hidden' id='inicio'/>
       </section>
       {/* Sección historia */}
-      <section className='flex flex-col lg:flex-row justify-between space-x-0 space-y-10 lg:px-60 lg:space-x-20 lg:space-y-0 items-center px-10 py-10 scroll-mt-22 bg-black' id='historia'> 
+      <section className='flex flex-col lg:flex-row justify-between space-x-0 space-y-10 lg:px-60 lg:space-x-20 lg:space-y-0 items-center px-10 py-10 border-y-2 border-black scroll-mt-22' id='historia'> 
         <div className='text-center max-w-170'>
-          <h2 className='text-4xl font-black text-white mb-4'>Nuestra Historia</h2>
-          <p className='text-xl text-white'>Lorem ipsum dolor sit amet consectetur adipiscing elit proin, cubilia vel sociis 
+          <h2 className='text-4xl font-black text-black mb-4'>Nuestra Historia</h2>
+          <p className='text-xl text-black'>Lorem ipsum dolor sit amet consectetur adipiscing elit proin, cubilia vel sociis 
           magnis dictumst pellentesque eleifend dis porttitor, sodales lacus turpis non 
           porta maecenas sapien. Ut in quis maecenas luctus a faucibus senectus curabitur 
           fames lacinia dictum, laoreet phasellus ad erat sodales etiam commodo ornare velit 
@@ -33,7 +38,17 @@ const Hero = () => {
           tellus bibendum.</p>
         </div>
         <div>
-          <img src={historiaImg} alt="historia img" className='w-60 max-w-75 rounded-[20px] lg:mt-0 '/>
+          {/*<img src={historiaImg} alt="historia img" className='w-60 max-w-75 rounded-[20px] lg:mt-0 '/>*/}
+          <video
+            src={videoHiatus}
+                className="w-60 max-w-75 rounded-[20px] lg:mt-0"
+                type="video/mp4"
+                controls
+                preload="none"
+              >
+                Tu navegador no soporta video.
+
+          </video>
         </div>
         
       </section>
