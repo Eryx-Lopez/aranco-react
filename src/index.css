@@ -3,6 +3,7 @@
 @import "tailwindcss";
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
@@ -16,7 +17,6 @@ h2{
 h3{
     font-family: "Barlow Condensed", sans-serif;
     font-weight: bolder;
-    margin-bottom: 16px;
     font-size: larger;
 }
 

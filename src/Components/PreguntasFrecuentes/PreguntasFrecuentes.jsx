@@ -1,0 +1,58 @@
+import React from 'react'
+import { useState } from 'react'
+import MapaTienda from '../MapaGoogle/MapaTienda';
+
+const faqs = [
+  { id: 1, 
+    pregunta: "¿Tienen tienda física?",
+    respuesta: <MapaTienda />
+  },
+  { id: 2, 
+    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
+    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+  },
+  { id: 3, 
+    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
+    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+  },
+  { id: 4, 
+    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
+    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+  },
+  { id: 5, 
+    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
+    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+  },
+]
+
+const PreguntasFrecuentes = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+  const toggleFAQ = (index) => {
+    setOpenIndex (openIndex === index ? null : index);
+  };
+
+  return (
+    <div className='w-80 md:w-3xl mx-auto m-26 mb-20 flex flex-col gap-4 scroll-mt-22' id='faqs'>
+      <h2 className='text-4xl font-bold mb-12 text-center'>Preguntas Frecuentes</h2>
+      {faqs.map((faq, index) => (
+        <div key={index} className=' bg-black text-white rounded-xl border-b py-6 px-8 md:py-4 hover:bg-red-950 cursor-pointer transition-colors duration-200'>
+          <button className='  cursor-pointer w-full text-left flex justify-between items-center focus:outline-none  hover:text-white'
+            onClick={() => toggleFAQ(index)}
+          >
+            <span className='text-base md:text-xl font-bold'>{faq.pregunta}</span>
+            <span className='text-xl'>{openIndex === index ? '-' : '+'}</span>
+          </button>
+          {openIndex === index && (
+            <p className='mt-2 text-base md:'>{faq.respuesta}</p>
+          )}
+        </div>
+      ))}
+      
+      <p className='text-center mt-8 text-lg'>¿No encontraste lo que buscabas? <a href="/contacto" className='text-red-900 hover:text-black
+       underline underline-offset-4'>Contáctanos</a></p>
+      
+    </div>
+  );
+};
+
+export default PreguntasFrecuentes
