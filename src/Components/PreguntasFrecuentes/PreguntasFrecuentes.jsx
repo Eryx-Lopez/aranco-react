@@ -8,20 +8,20 @@ const faqs = [
     respuesta: <MapaTienda />
   },
   { id: 2, 
-    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
-    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    pregunta: "¿Qué tipo de tela es?",
+    respuesta: "Es tela polar hecha de 100% poliéster, haciéndola suave, cálida y con colores vibrantes perfectos para tus fotos."
   },
   { id: 3, 
-    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
-    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    pregunta: "¿De qué tamaños pueden ser?",
+    respuesta: "El tamaño estandar es de 1.10 m x 2 m, pero también se pueden hacer más pequeñas o más largas con un ancho máximo de 1.10 m"
   },
   { id: 4, 
-    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
-    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    pregunta: "¿Hacen entregas?",
+    respuesta: "Manejamos entregas en toda la Zona Metropolitana de Guadalajara. Para otras zonas, por favor contáctanos para coordinar el envío, el cual sería con costo adicional."
   },
   { id: 5, 
-    pregunta: "¿Lorem ipsum dolor sit amet consectetur?",
-    respuesta: "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    pregunta: "¿Qué imagenes pueden ponerse en la frazada?",
+    respuesta: "Se puede poner cualquier imagen que se desee."
   },
 ]
 
