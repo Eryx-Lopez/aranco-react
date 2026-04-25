@@ -1,48 +1,58 @@
 import React, { useState, useEffect} from 'react'
 import { useNavigate} from 'react-router-dom'
 
+// Kpop
+import bts from '../../Assets/Referencias/Kpop/KPOP_bts1.png'
+import jungkook from'../../Assets/Referencias/Kpop/KPOP_jungkook1.png'
+import skz from '../../Assets/Referencias/Kpop/KPOP_strayKids1.png'
+import twice from '../../Assets/Referencias/Kpop/KPOP_twice1.png'
+import yoongi from'../../Assets/Referencias/Kpop/KPOP_yoongi1.png'
 
-import karma_skz1 from '../../Assets/Cobija_1.jpg'
-import jungkook1 from '../../Assets/Cobija_2.jpg'
-import monlaferte1 from '../../Assets/Cobija_3.jpg'
-import onepiece1 from '../../Assets/Cobija_4.jpg'
-import karma_felix1 from '../../Assets/Cobija_5.jpg'
-import humbe1 from '../../Assets/Cobija_6.jpg'
+// Caricaturas
+import onepiece from '../../Assets/Referencias/Caricaturas/CAR_onePiece.png'
+import rickMorty from '../../Assets/Referencias/Caricaturas/CAR_rickMorty.png'
+import roseStevenUniverse from '../../Assets/Referencias/Caricaturas/CAR_roseStevUniverse.png'
+
+// Música
+import albumFuerzaReg from '../../Assets/Referencias/Musica/MUS_albumFuerzaRegida.png'
+import albumMonLaferte from '../../Assets/Referencias/Musica/MUS_albumMonLaferte.png'
+import humbe from '../../Assets/Referencias/Musica/MUS_humbe.png'
+
+
+// Series y Peliculas
+import robertIron1 from '../../Assets/Referencias/Series_Peliculas/PEL_robertIronMan.png'
+import robertIronNav from '../../Assets/Referencias/Series_Peliculas/PEL_robertIronManNavidad.png'
 
 
 const categoriasList = [
     { id: 1, text: 'K-pop', key: 'kpop' },
     { id: 2, text: 'Caricaturas', key:'caricaturas' },
-    { id: 3, text: 'Pop', key: 'pop' },
+    { id: 3, text: 'Música', key: 'musica' },
     { id: 4, text: 'Series y películas', key: 'peliculas' },
     { id: 5, text: 'Personalizar', key: 'personalizadas' },
 ]
 
 const productos ={
     kpop: [
-      { id: 1, nombre: 'KARMA Stray Kids', precio: '$300', img: karma_skz1 },
-      { id: 2, nombre: 'KARMA Felix (Stray Kids)', precio: '$300', img: karma_felix1 },
-      { id: 3, nombre: 'Jungkook (BTS)', precio: '$300', img: jungkook1 },
+      { id: 1, nombre: 'BTS', precio: '$300', img: bts },
+      { id: 2, nombre: 'BTS JungKook', precio: '$300', img: jungkook },
+      { id: 3, nombre: 'Stray Kids', precio: '$300', img: skz },
+      { id: 4, nombre: 'TWICE', precio: '$300', img: twice },
+      { id: 5, nombre: 'BTS Yoongi', precio: '$300', img: yoongi },
     ],
     caricaturas: [
-      { id: 1, nombre: 'One Piece', precio: '$300', img: onepiece1 },
-      { id: 2, nombre: 'Goku (Dragon Ball)', precio: '$300', img: onepiece1 },
-      { id: 3, nombre: 'Naruto', precio: '$300', img: onepiece1 },
+      { id: 1, nombre: 'One Piece', precio: '$300', img: onepiece },
+      { id: 2, nombre: 'Rick Y Morty', precio: '$300', img: rickMorty },
+      { id: 3, nombre: 'Steven Universe Rose', precio: '$300', img: roseStevenUniverse },
     ],
-    pop: [
-      { id: 1, nombre: 'Humbe', precio: '$300', img: humbe1 },
-      { id: 2, nombre: 'Mon Laferte', precio: '$300', img: monlaferte1 },
-      { id: 3, nombre: 'Bad Bunny', precio: '$300', img: humbe1 },
-    ],
-    personalizadas: [
-      { id: 1, nombre: 'Humbe', precio: '$300', img: humbe1 },
-      { id: 2, nombre: 'Mon Laferte', precio: '$300', img: monlaferte1 },
-      { id: 3, nombre: 'Bad Bunny', precio: '$300', img: karma_felix1 },
+    musica: [
+      { id: 1, nombre: 'Fuerza Regida', precio: '$300', img: albumFuerzaReg },
+      { id: 2, nombre: 'Mon Laferte', precio: '$300', img: albumMonLaferte },
+      { id: 3, nombre: 'Humbe', precio: '$300', img: humbe },
     ],
     peliculas: [
-      { id: 1, nombre: 'Humbe', precio: '$300', img: humbe1 },
-      { id: 2, nombre: 'Mon Laferte', precio: '$300', img: monlaferte1 },
-      { id: 3, nombre: 'Bad Bunny', precio: '$300', img: karma_felix1 },
+      { id: 1, nombre: 'Robert Downey Jr.', precio: '$300', img: robertIron1 },
+      { id: 2, nombre: 'Robert Downey Jr.', precio: '$300', img: robertIronNav },
     ],
     
 }
